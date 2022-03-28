@@ -33,7 +33,9 @@ export default class Register extends Component {
                         </TextInput>
 
                     </View>
-                    <TouchableHighlight style={styles.touchable}>
+                    <TouchableHighlight style={styles.touchable}
+                    onPress={()=> this.props.navigation.navigate('Otp')}>
+
                         <Text style={styles.touchbletxt}>
                             Continue
                         </Text>
