@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { View, StyleSheet, Image, Text, TextInput, TouchableHighlight } from 'react-native'
-
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 export default class Otp extends Component {
     render() {
@@ -12,7 +12,7 @@ export default class Otp extends Component {
                 </Image>
                 <Image
                     source={require('../src/assets/group.png')}
-                    style={styles.icon}>
+                    style={styles.icons}>
                 </Image>
                 <Text style={styles.txt1}>
                     Verification code
@@ -64,11 +64,22 @@ export default class Otp extends Component {
                         onPress={() => this.props.navigation.navigate('Otp')}>
 
                         <Text style={styles.touchbletxt}>
-                        Resend OTP
+                            Resend OTP
                         </Text>
                     </TouchableHighlight>
+                    <Text style={styles.txt4}>
+                        Resend after 28s
+                    </Text>
+                    <View style={styles.view2}>
+                        <Icon name="phone" size={30} color='#00C458' />
+                        <Text style={styles.txt5}>
+                        Contact Us
+                        </Text>
+                    </View>
+
 
                 </View>
+
             </View>
         )
     }
@@ -84,14 +95,14 @@ const styles = StyleSheet.create({
         width: 169,
         height: 42,
         resizeMode: "contain",
-        marginTop: 46,
+        marginTop: 30,
         backgroundColor: 'white'
     },
-    icon: {
+    icons: {
         width: 141,
         height: 128,
         resizeMode: 'contain',
-        marginTop: 100
+        marginTop: 90
     },
     txt1: {
         width: 156,
@@ -99,13 +110,13 @@ const styles = StyleSheet.create({
         fontFamily: 'Gilroy',
         fontWeight: '700',
         color: '#002333',
-        marginTop: 100,
+        marginTop: 80,
         fontSize: 20
     },
     txt2: {
         height: 16,
         fontFamily: 'Gilroy-Regular',
-        fontSize: 'normal',
+        fontWeight: 'normal',
         fontSize: 14,
         color: '#9F9F9F',
         marginTop: 5
@@ -116,7 +127,7 @@ const styles = StyleSheet.create({
         fontWeight: '700',
         fontSize: 14,
         color: '#002333',
-        marginTop: 60
+        marginTop: 20
     },
     view1: {
         flexDirection: 'column',
@@ -124,12 +135,12 @@ const styles = StyleSheet.create({
         height: 300,
         backgroundColor: '#002333',
         borderRadius: 16,
-        marginTop: 20,
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop: 20
     },
     view2: {
         flexDirection: 'row',
-
+        marginTop: 10
     },
     inputbox1: {
         width: 45,
@@ -155,5 +166,23 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontFamily: 'Gilroy',
         fontWeight: '700',
-    }
+    },
+    txt4: {
+        height: 12,
+        fontFamily: 'Gilroy-Regular',
+        fontSize: 10,
+        color: '#446270',
+        fontWeight: 'normal',
+        marginTop: 8
+    },
+    txt5: {
+        height: 18,
+        fontFamily: 'Gilroy-Regular',
+        fontSize: 14,
+        color: '#00C458',
+        fontWeight: '700',
+        marginTop: 8
+    },
+    
+
 })
