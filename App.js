@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Register from './src/Register'
 import Otp from './src/Otp';
+import StudentDetails from './src/StudentDetails';
 
 const Stack = createStackNavigator();
 
@@ -15,9 +16,13 @@ function MyStack() {
         options={{ headerShown: false }}
 
       />
-            <Stack.Screen
+      <Stack.Screen
         name='Otp'
         component={Otp}
+        options={{ headerShown: false }} />
+      <Stack.Screen
+        name='StudentDetails'
+        component={StudentDetails}
         options={{ headerShown: false }} />
 
     </Stack.Navigator>

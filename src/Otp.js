@@ -40,7 +40,6 @@ export default class Otp extends Component {
                             placeholderTextColor={'white'}
                         >
                         </TextInput>
-
                         <TextInput style={styles.inputbox1}
                             editable={true}
                             placeholderTextColor={'white'}
@@ -51,17 +50,14 @@ export default class Otp extends Component {
                             placeholderTextColor={'white'}
                         >
                         </TextInput>
-
                         <TextInput style={styles.inputbox1}
                             editable={true}
                             placeholderTextColor={'white'}
                         >
                         </TextInput>
-
-
                     </View>
                     <TouchableHighlight style={styles.touchable}
-                        onPress={() => this.props.navigation.navigate('Otp')}>
+                        onPress={() => this.props.navigation.navigate('StudentDetails')}>
 
                         <Text style={styles.touchbletxt}>
                             Resend OTP
@@ -71,16 +67,13 @@ export default class Otp extends Component {
                         Resend after 28s
                     </Text>
                     <View style={styles.view2}>
-                        <Icon style={{marginTop:8}} name="call" size={22} color='#00C458' />
-                        
+                        <Icon style={{ marginTop: 8 }} name="call" size={22} color='#00C458' />
+
                         <Text style={styles.txt5}>
-                        Contact Us
+                            Contact Us
                         </Text>
                     </View>
-
-
                 </View>
-
             </View>
         )
     }
@@ -183,9 +176,9 @@ const styles = StyleSheet.create({
         color: '#00C458',
         fontWeight: '600',
         marginTop: 8,
-        marginBottom:10,
-        marginLeft:5
+        marginBottom: 10,
+        marginLeft: 5
     },
-    
+
 
 })
