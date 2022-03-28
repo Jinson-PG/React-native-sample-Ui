@@ -71,8 +71,7 @@ export default class Otp extends Component {
                         Resend after 28s
                     </Text>
                     <View style={styles.view2}>
-                        <Icon name="phone" size={30} color='#00C458' />
-
+                        <Icon style={{marginTop:8}} name="call" size={22} color='#00C458' />
                         
                         <Text style={styles.txt5}>
                         Contact Us
@@ -180,10 +179,12 @@ const styles = StyleSheet.create({
     txt5: {
         height: 18,
         fontFamily: 'Gilroy-Regular',
-        fontSize: 14,
+        fontSize: 15,
         color: '#00C458',
-        fontWeight: '700',
-        marginTop: 8
+        fontWeight: '600',
+        marginTop: 8,
+        marginBottom:10,
+        marginLeft:5
     },
     
 
