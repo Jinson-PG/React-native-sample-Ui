@@ -72,6 +72,8 @@ export default class Otp extends Component {
                     </Text>
                     <View style={styles.view2}>
                         <Icon name="phone" size={30} color='#00C458' />
+
+                        
                         <Text style={styles.txt5}>
                         Contact Us
                         </Text>
