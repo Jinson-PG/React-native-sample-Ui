@@ -65,7 +65,7 @@ const styles = StyleSheet.compose({
         fontSize: 20,
         fontFamily: 'Gilroy',
         fontWeight: '700',
-        marginTop: 50
+        marginTop: 70
     },
     txt2: {
         color: '#9F9F9F',
@@ -78,7 +78,7 @@ const styles = StyleSheet.compose({
         height: 300,
         backgroundColor: '#002333',
         borderRadius: 16,
-        marginTop: 32
+        marginTop: 80
     },
     view2: {
         flexDirection: 'row',
@@ -110,7 +110,7 @@ const styles = StyleSheet.compose({
         backgroundColor: '#00C458',
         marginLeft: 45,
         borderRadius: 8,
-        marginTop: 20,
+        marginTop: 25,
         alignItems: 'center',
         justifyContent: 'center',
     },

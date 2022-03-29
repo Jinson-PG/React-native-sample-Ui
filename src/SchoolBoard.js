@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, Image, Text, TextInput, TouchableHighlight } from 'react-native'
 
-export default class StudentDetails extends Component {
-
+export default class SchoolBoard extends Component {
     render() {
         return (
             <View style={styles.container}>
@@ -15,37 +14,28 @@ export default class StudentDetails extends Component {
                     style={styles.icons}>
                 </Image>
                 <Text style={styles.txt1}>
-                    Student details
+                    Select you school board
                 </Text>
                 <View style={styles.view1}>
-                    <View style={{ marginTop: 20, alignItems: 'center' }}>
+                    <View style={{ marginTop: 30, alignItems: 'center' }}>
                         <TextInput style={styles.inputbox1}
-                            placeholder='Full name'
-                            placeholderTextColor={'#446270'}
-                            onFocus={() => this.Onfocus()}
-
-                        >
-                        </TextInput>
-                        <TextInput style={styles.inputbox1}
-                            placeholder='Email'
+                            placeholder='Select board'
                             keyboardType='email-address'
                             placeholderTextColor={'#446270'}
                             onPress={() => this.Onfocus()}>
                         </TextInput>
                         <TextInput style={styles.inputbox1}
-                            placeholder='Select state'
-                            placeholderTextColor={'#446270'}>
-                        </TextInput>
-                        <TextInput style={styles.inputbox1}
-                            placeholder='Pin code'
-                            keyboardType='number-pad'
-                            maxLength={6}
-                            placeholderTextColor={'#446270'}>
+                            placeholder='Select class'
+                            keyboardType='email-address'
+                            placeholderTextColor={'#446270'}
+                            onPress={() => this.Onfocus()}
+                            scrollEnabled={true}>
+                        
                         </TextInput>
                         <TouchableHighlight style={styles.touchable}
                             onPress={() => this.props.navigation.navigate('SchoolBoard')}>
                             <Text style={styles.touchbletxt}>
-                                Register
+                            Continue
                             </Text>
                         </TouchableHighlight>
                     </View>
@@ -77,13 +67,12 @@ const styles = StyleSheet.create({
         marginTop: 60
     },
     txt1: {
-
         height: 24,
         fontSize: 20,
         fontFamily: 'Gilroy ☞',
         fontWeight: '700',
         color: "#002333",
-        marginTop: 60
+        marginTop: 120
     },
     view1: {
         flexDirection: 'column',
@@ -94,13 +83,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: 20
     },
-
     inputbox1: {
         width: 311,
         height: 51,
         borderColor: '#13394A',
         borderWidth: 1,
-        marginTop: 10,
+        marginTop: 20,
         marginLeft: 8,
         backgroundColor: '#062E40',
         paddingLeft: 15,
@@ -114,13 +102,13 @@ const styles = StyleSheet.create({
         height: 56,
         backgroundColor: '#00C458',
         borderRadius: 5,
-        marginTop: 20,
+        marginTop: 40,
         alignItems: 'center',
         justifyContent: 'center',
     },
     touchbletxt: {
         color: '#FFFFFF',
-        fontSize: 20,
+        fontSize: 14,
         fontFamily: 'Gilroy',
         fontWeight: '700',
     },
