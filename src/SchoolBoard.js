@@ -33,7 +33,7 @@ export default class SchoolBoard extends Component {
                         
                         </TextInput>
                         <TouchableHighlight style={styles.touchable}
-                            onPress={() => this.props.navigation.navigate('SchoolBoard')}>
+                            onPress={() => this.props.navigation.navigate('AppTour')}>
                             <Text style={styles.touchbletxt}>
                             Continue
                             </Text>
