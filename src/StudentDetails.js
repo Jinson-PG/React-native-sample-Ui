@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { View, StyleSheet, Image, Text, TextInput, TouchableHighlight } from 'react-native'
 
 export default class StudentDetails extends Component {
+   
     render() {
         return (
             <View style={styles.container}>
@@ -21,11 +22,15 @@ export default class StudentDetails extends Component {
                     <TextInput style={styles.inputbox1}
                         placeholder='Full name'
                         placeholderTextColor={'#446270'}
+                        onFocus={()=> this.Onfocus()}
+                        
                         >
                     </TextInput>
                     <TextInput style={styles.inputbox1}
                         placeholder='Email'
-                        placeholderTextColor={'#446270'}>
+                        keyboardType='email-address'
+                        placeholderTextColor={'#446270'}
+                        onPress={()=> this.Onfocus()}>
                     </TextInput>
                     <TextInput style={styles.inputbox1}
                         placeholder='Select state'
@@ -33,6 +38,8 @@ export default class StudentDetails extends Component {
                     </TextInput>
                     <TextInput style={styles.inputbox1}
                         placeholder='Pin code'
+                        keyboardType='number-pad'
+                        maxLength={6}
                         placeholderTextColor={'#446270'}>
                     </TextInput>
                     <TouchableHighlight style={styles.touchable}
