@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, TextInput, Text, Image, ImageBackground, ScrollView } from 'react-native'
+import { TouchableHighlight } from 'react-native-gesture-handler'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 export default class Home extends Component {
     render() {
@@ -105,27 +106,86 @@ export default class Home extends Component {
                 </Text>
                 <View style={styles.videoview}>
                     <ScrollView horizontal={true} style={{ marginLeft: 32, marginTop: 15 }}>
-                        <ImageBackground source={require('../src/assets/sci.png')}
+                        <ImageBackground source={require('../src/assets/biolgy.png')}
                             style={{
                                 width: 213,
                                 height: 121,
                                 resizeMode: 'contain',
                             }}>
-
+                            <View style={styles.imgbackview}>
+                                <Image style={styles.playbtn}
+                                    source={require('../src/assets/playbtn.png')} >
+                                </Image>
+                                <Text style={styles.coursetitletxt}>
+                                    Course Title
+                                </Text>
+                            </View>
                         </ImageBackground>
-                        <ImageBackground source={require('../src/assets/biolgy.png')}
+                        <ImageBackground
+                            source={require('../src/assets/sci.png')}
                             style={styles.videoimg}>
-
+                            <View style={styles.imgbackview}>
+                                <Image style={styles.playbtn}
+                                    source={require('../src/assets/playbtn.png')}>
+                                </Image>
+                                <Text style={styles.coursetitletxt}>
+                                    Course Title
+                                </Text>
+                            </View>
                         </ImageBackground>
                         <ImageBackground source={require('../src/assets/chem.png')}
                             style={styles.videoimg}>
-
+                            <View style={styles.imgbackview}>
+                                <Image style={styles.playbtn}
+                                    source={require('../src/assets/playbtn.png')}>
+                                </Image>
+                                <Text style={styles.coursetitletxt}>
+                                    Course Title
+                                </Text>
+                            </View>
                         </ImageBackground>
-
-
                     </ScrollView>
                 </View>
-
+                <View style={{ marginTop: 10, marginLeft: 32, height: 200, marginBottom: 10, borderRadius: 10 }}>
+                    <ScrollView horizontal={true} >
+                        <View style={{ flexDirection: 'column', width: 238, height: '100%', backgroundColor: '#002333', borderRadius: 15 }}>
+                            <TextInput style={styles.procircle}>
+                            </TextInput>
+                            <Text style={{
+                                fontWeight: 'bold',
+                                color: '#FFFFFF', fontFamily: 'Gilroy', fontSize: 18, marginLeft: 20,
+                            }}>
+                                Target live classes
+                            </Text>
+                            <Text style={{ color: '#446270', fontSize: 12, marginLeft: 24 }}>
+                                Live classes by best teachers from LearningHub to clear your doubts and to provide individual attention
+                            </Text>
+                            <TouchableHighlight style={styles.touchable}>
+                                <Text style={styles.touchbletxt}>
+                                    Book a free Class
+                                </Text>
+                            </TouchableHighlight>
+                        </View>
+                        <View style={{ flexDirection: 'column', width: 238, height: '100%', backgroundColor: '#002333', borderRadius: 15, marginLeft: 5 }}>
+                            <TextInput style={styles.procircle}>
+                            </TextInput>
+                            <Text style={{
+                                fontWeight: 'bold',
+                                color: '#FFFFFF', fontFamily: 'Gilroy', fontSize: 18, marginLeft: 20,
+                            }}>
+                                Avail free online counselling session
+                            </Text>
+                            <Text style={{ color: '#446270', fontSize: 12, marginLeft: 24 }}>
+                                By LearningHub's career experts
+                            </Text>
+                            <TouchableHighlight style={styles.touchable}>
+                                <Text style={styles.touchbletxt}>
+                                    Schedule a call
+                                </Text>
+                            </TouchableHighlight>
+                        </View>
+                    </ScrollView>
+                </View>
             </View>
         )
     }
@@ -252,7 +312,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         flexDirection: 'row',
         marginTop: 5,
-        
+
     },
     circle: {
         width: 20,
@@ -290,7 +350,50 @@ const styles = StyleSheet.create({
         height: 121,
         resizeMode: 'contain',
         marginLeft: 8,
-    }
+    },
+    imgbackview: {
+        flexDirection: 'row',
+        marginTop: 72,
+        marginLeft: 10
+    },
+    playbtn: {
+        width: 24,
+        height: 24,
+        resizeMode: 'contain'
+    },
+    coursetitletxt: {
+        fontFamily: "Gilroy",
+        fontSize: 12,
+        fontWeight: '800',
+        color: '#FFFFFF',
+        marginLeft: 10,
+        marginTop: 4
+    },
+    procircle: {
+        width: 60,
+        height: 60,
+        borderRadius: 100 / 2,
+        backgroundColor: '#002E43',
+        marginLeft: 20,
+        marginTop: 20,
+        marginBottom: 8
+    },
+    touchable: {
+        width: 100,
+        height: 30,
+        marginLeft: 24,
+        backgroundColor: '#00C458',
+        borderRadius: 5,
+        marginTop: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    touchbletxt: {
+        color: '#FFFFFF',
+        fontSize: 12,
+        fontFamily: 'Gilroy',
+        fontWeight: '700',
+    },
 
 
 })
