@@ -6,6 +6,7 @@ export default class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
+
                 <View style={styles.viewfirstpart}>
                     <View style={styles.view1}>
                         <View style={styles.viewdash}>
@@ -147,8 +148,11 @@ export default class Home extends Component {
                     </ScrollView>
                 </View>
                 <View style={{ marginTop: 10, marginLeft: 32, height: 200, marginBottom: 10, borderRadius: 10 }}>
+
                     <ScrollView horizontal={true} >
+
                         <View style={{ flexDirection: 'column', width: 238, height: '100%', backgroundColor: '#002333', borderRadius: 15 }}>
+
                             <TextInput style={styles.procircle}>
                             </TextInput>
                             <Text style={{
@@ -157,6 +161,7 @@ export default class Home extends Component {
                             }}>
                                 Target live classes
                             </Text>
+
                             <Text style={{ color: '#446270', fontSize: 12, marginLeft: 24 }}>
                                 Live classes by best teachers from LearningHub to clear your doubts and to provide individual attention
                             </Text>
@@ -178,14 +183,25 @@ export default class Home extends Component {
                             <Text style={{ color: '#446270', fontSize: 12, marginLeft: 24 }}>
                                 By LearningHub's career experts
                             </Text>
-                            <TouchableHighlight style={styles.touchable}>
+                            <TouchableHighlight style={styles.touchable}
+                             onPress={() => this.props.navigation.navigate('Course')}>
                                 <Text style={styles.touchbletxt}>
                                     Schedule a call
                                 </Text>
                             </TouchableHighlight>
+                            <View style={styles.endbox}>
+                                <View style={{ flexDirection: 'column', backgroundColor: 'black', width: 20, height: 20 }}
+                                >
+                                    <Image
+                                        source={require('../src/assets/home.png')}
+                                        style={{ width: 24,resizeMode:'contain',marginTop:5,marginLeft:6, height: 24, backgroundColor: '#00C458' }}></Image>
+                                </View>
+                            </View>
                         </View>
+
                     </ScrollView>
                 </View>
+
             </View>
         )
     }
@@ -394,6 +410,18 @@ const styles = StyleSheet.create({
         fontFamily: 'Gilroy',
         fontWeight: '700',
     },
+    endbox: {
+        flexDirection: 'row',
+        borderRadius: 10,
+        marginLeft: -245,
+        marginTop: -69,
+        width: 343,
+        height: 50,
+        backgroundColor: '#FFFFFF',
+        shadowColor: '#00000014',
+        borderWidth: 1,
+        borderColor: '#EEEEEE'
+    }
 
 
 })
