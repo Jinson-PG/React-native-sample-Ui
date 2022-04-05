@@ -92,13 +92,15 @@ export default class Video extends Component {
                             </TouchableHighlight>
                         </View>
                     </View>
-                    <View style={styles.view5}>
-                    <Image
+                    <View style={styles.view5}
+                    >
+                        <Image
                             source={require('../src/assets/whatsapp.png')}
-                            style={{ width: 20, height: 20,resizeMode:'contain' }}>
+                            style={{ width: 20, height: 20, resizeMode: 'contain' }}>
                         </Image>
-                        <Text style={styles.txt6}>
-                        Chat with teacher
+                        <Text style={styles.txt6}
+                            onPress={() => this.props.navigation.navigate('Settings')}>
+                            Chat with teacher
                         </Text>
                     </View>
 
@@ -124,7 +126,6 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 130,
         backgroundColor: '#00202F',
-
     },
     txt1: {
         width: 204,
@@ -135,7 +136,6 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         marginLeft: 32,
         marginTop: 18
-
     },
     txt2: {
         fontSize: 8,
@@ -250,8 +250,8 @@ const styles = StyleSheet.create({
     view5: {
         width: 321,
         height: 60,
-        alignItems:'center',
-        justifyContent:'center',
+        alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: '#00202F',
         marginLeft: 32,
         marginRight: 32,
@@ -262,13 +262,13 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         flexDirection: 'row',
     },
-    txt6:{
-        fontWeight:'700',
-        fontSize:14,
-        fontFamily:"Gilroy",
-        color:'#00C458',
-        marginLeft:15,
-        marginTop:-5
+    txt6: {
+        fontWeight: '700',
+        fontSize: 14,
+        fontFamily: "Gilroy",
+        color: '#00C458',
+        marginLeft: 15,
+        marginTop: -5
     }
 
 })

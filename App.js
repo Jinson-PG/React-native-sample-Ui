@@ -9,6 +9,7 @@ import AppTour from './src/AppTour';
 import Home from './src/Home';
 import Course from './src/Course';
 import Video from './src/Video';
+import Settings from './src/Settings'
 
 const Stack = createStackNavigator();
 
@@ -46,9 +47,13 @@ function MyStack() {
         name='Course'
         component={Course}
         options={{ headerShown: false }} />
-         <Stack.Screen
+      <Stack.Screen
         name='Video'
         component={Video}
+        options={{ headerShown: false }} />
+      <Stack.Screen
+        name='Settings'
+        component={Settings}
         options={{ headerShown: false }} />
 
     </Stack.Navigator>
