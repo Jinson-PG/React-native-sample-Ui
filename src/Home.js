@@ -184,24 +184,48 @@ export default class Home extends Component {
                                 By LearningHub's career experts
                             </Text>
                             <TouchableHighlight style={styles.touchable}
-                             onPress={() => this.props.navigation.navigate('Course')}>
+                                onPress={() => this.props.navigation.navigate('Course')}>
                                 <Text style={styles.touchbletxt}>
                                     Schedule a call
                                 </Text>
                             </TouchableHighlight>
                             <View style={styles.endbox}>
-                                <View style={{ flexDirection: 'column', backgroundColor: 'black', width: 20, height: 20 }}
-                                >
-                                    <Image
-                                        source={require('../src/assets/home.png')}
-                                        style={{ width: 24,resizeMode:'contain',marginTop:5,marginLeft:6, height: 24, backgroundColor: '#00C458' }}></Image>
+                                <View style={styles.view8}>
+                                    <View>
+                                        <Image style={styles.homeimg}
+                                            source={require('../src/assets/home.png')}>
+                                        </Image>
+
+                                        <View style={{ width: 4, height: 4, borderRadius: 4 / 2, backgroundColor: '#000', marginLeft: 25, }}>
+                                        </View>
+                                    </View>
+                                    <Image style={styles.homeimg}
+                                        source={require('../src/assets/play.png')}>
+                                    </Image>
+                                    <Text style={styles.hometxt}>
+                                        Recent
+                                    </Text>
+                                    <Image style={styles.homeimg}
+                                        source={require('../src/assets/menu.png')}>
+                                    </Image>
+                                    <Text style={styles.hometxt}>
+                                        Exams
+                                    </Text>
+                                    <Image style={styles.homeimg}
+                                        source={require('../src/assets/pronormal.png')}>
+                                    </Image>
+                                    <Text style={styles.hometxt}>
+                                        Profile
+                                    </Text>
+                                    <Icon style={{ marginLeft: 20 }} name="email" size={20} color='#e3dada' />
+                                    <Text style={styles.hometxt}>
+                                        Contact
+                                    </Text>
                                 </View>
                             </View>
                         </View>
-
                     </ScrollView>
                 </View>
-
             </View>
         )
     }
@@ -421,6 +445,32 @@ const styles = StyleSheet.create({
         shadowColor: '#00000014',
         borderWidth: 1,
         borderColor: '#EEEEEE'
+    },
+    view8: {
+        width: 333,
+        height: 50,
+        backgroundColor: '#FFF',
+        borderColor: '#EEEEEE',
+        borderWidth: 1,
+        shadowColor: '#00000014',
+        borderRadius: 5,
+
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    homeimg: {
+        width: 17,
+        height: 17,
+        resizeMode: 'contain',
+        marginLeft: 20,
+        marginBottom: 5
+    },
+    hometxt: {
+        fontFamily: 'Gilroy',
+        fontWeight: '700',
+        fontSize: 8,
+        color: '#C2C2C2',
+        marginLeft: 5
     }
 
 
