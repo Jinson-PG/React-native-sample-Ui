@@ -12,7 +12,8 @@ export default class Settings extends Component {
                     </Text>
                     <Icon style={{ marginTop: 33, marginLeft: 80 }} name="notifications-none" size={25} color='#e3dada' />
                     <View style={styles.viewdash}>
-                        <Icon style={{ marginTop: 5 }} name="grid-view" size={20} color='#00C458' />
+                        <Icon style={{ marginTop: 5 }} name="grid-view" size={20} color='#00C458' 
+                          onPress={() => this.props.navigation.navigate('Chapter')}/>
                     </View>
                 </View>
                 <View style={styles.view2}>
@@ -178,13 +179,16 @@ export default class Settings extends Component {
                             Recent
                         </Text>
                         <Image style={styles.homeimg}
+
                             source={require('../src/assets/menu.png')}>
                         </Image>
                         <Text style={styles.hometxt}>
                             Exams
                         </Text>
-                        <View style={{ flexDirection: 'column' }} >
+                        <View style={{ flexDirection: 'column' }}
+                          >
                             <Image style={styles.homeimg}
+
                                 source={require('../src/assets/pro.png')}>
                             </Image>
                             <View style={{ width: 4, height: 4, borderRadius: 4 / 2, backgroundColor: '#000', marginLeft: 25, }}>
