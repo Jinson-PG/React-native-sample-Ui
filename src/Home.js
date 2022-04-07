@@ -1,7 +1,26 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, TextInput, Text, Image, ImageBackground, ScrollView } from 'react-native'
 import { TouchableHighlight } from 'react-native-gesture-handler'
+import SideBar from './Drawer/SideBar'
 import Icon from 'react-native-vector-icons/MaterialIcons'
+
+// function MyDrawer() {
+//     return (
+//         <Drawer.Navigator
+//         drawerContent={()=> <SideBar/>}
+//         >
+         
+//         </Drawer.Navigator>
+//     )
+// }
+// function MyDrawer(){
+//   return(
+//     <Drawer.Screen
+//    name='SideBar'
+//    component={SideBar}
+//     />
+//   )
+// }
 export default class Home extends Component {
     render() {
         return (
@@ -10,7 +29,9 @@ export default class Home extends Component {
                 <View style={styles.viewfirstpart}>
                     <View style={styles.view1}>
                         <View style={styles.viewdash}>
-                            <Icon style={{ marginTop: 5 }} name="grid-view" size={20} color='#00C458' />
+                            {/* <MyDrawer/> */}
+                            <Icon style={{ marginTop: 5 }} name="grid-view" size={20} color='#00C458'
+                            />
                         </View>
                         <Image
                             source={require('../src/assets/logo.png')}
@@ -54,7 +75,8 @@ export default class Home extends Component {
                 <View style={styles.ScrollView}>
                     <ScrollView
                         horizontal={true} style={{ height: 55, marginLeft: 32, marginTop: 50 }}>
-                        <View style={styles.viewsubject}>
+                        <View style={styles.viewsubject1}
+                          >
                             <TextInput
                                 style={styles.circle}>
                             </TextInput>
@@ -64,7 +86,8 @@ export default class Home extends Component {
                                 fontWeight: '700',
                                 color: '#002333',
                                 marginTop: 8,
-                            }} >
+                            }} 
+                            onPress={() => this.props.navigation.navigate('Course')}>
                                 Biology
                             </Text>
                         </View>
@@ -184,7 +207,7 @@ export default class Home extends Component {
                                 By LearningHub's career experts
                             </Text>
                             <TouchableHighlight style={styles.touchable}
-                                onPress={() => this.props.navigation.navigate('Course')}>
+                             >
                                 <Text style={styles.touchbletxt}>
                                     Schedule a call
                                 </Text>
@@ -212,9 +235,11 @@ export default class Home extends Component {
                                         Exams
                                     </Text>
                                     <Image style={styles.homeimg}
-                                        source={require('../src/assets/pronormal.png')}>
+                                        source={require('../src/assets/pronormal.png')}
+                                        onPress={() => this.props.navigation.navigate('Settings')}>
                                     </Image>
-                                    <Text style={styles.hometxt}>
+                                    <Text style={styles.hometxt}
+                                    onPress={() => this.props.navigation.navigate('Settings')}>
                                         Profile
                                     </Text>
                                     <Icon style={{ marginLeft: 20 }} name="email" size={20} color='#e3dada' />
@@ -343,6 +368,17 @@ const styles = StyleSheet.create({
         height: 55,
         flexDirection: 'row',
     },
+    viewsubject1: {
+        width: 95,
+        height: 40,
+        borderColor: '#002333',
+        backgroundColor: 'white',
+        borderWidth: 1,
+        borderRadius: 8,
+        flexDirection: 'row',
+        marginTop: 5,
+
+    },
     viewsubject: {
         width: 95,
         height: 40,
@@ -352,6 +388,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         flexDirection: 'row',
         marginTop: 5,
+        marginLeft:5
 
     },
     circle: {

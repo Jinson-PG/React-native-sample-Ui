@@ -18,7 +18,7 @@ export default class AppTour extends Component {
                     The app tour description goes here.
                 </Text>
                 <TouchableHighlight style={styles.touchable}
-                    onPress={() => this.props.navigation.navigate('Home')}>
+                    onPress={() => this.props.navigation.navigate('Drawer')}>
 
                     <Text style={styles.touchbletxt}>
                     <Icon style={{ marginTop: 8 }} name="east" size={22} color='white' />

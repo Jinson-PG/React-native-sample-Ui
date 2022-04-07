@@ -60,7 +60,8 @@ export default class Chapter extends Component {
                 <View style={styles.view1}>
                     <View style={{ flexDirection: 'row', marginTop: 40 }}>
                         <View style={{ alignItems: 'center', width: 32, height: 32, borderWidth: 1, borderColor: '#ebe6e6', marginLeft: 32, }}>
-                            <Icon style={{ marginTop: 5 }} name="chevron-left" size={20} color='#00C458' />
+                            <Icon style={{ marginTop: 5 }} name="chevron-left" size={20} color='#00C458'
+                              onPress={() => this.props.navigation.navigate('Chapter')} />
                         </View>
                         <Text style={styles.txtbiology}>
                             Biology

@@ -11,7 +11,8 @@ export default class Course extends Component {
 
                 <View style={styles.view2}>
                     <View style={{ alignItems: 'center', width: 32, height: 32, borderWidth: 1, borderColor: '#ebe6e6', marginLeft: 32, marginTop: 40 }}>
-                        <Icon style={{ marginTop: 5 }} name="chevron-left" size={20} color='#00C458' />
+                        <Icon style={{ marginTop: 5 }} name="chevron-left" size={20} color='#00C458' 
+                         onPress={() => this.props.navigation.navigate('Home')}/>
                     </View>
                     <Text style={styles.txtbio}>
                         Biology

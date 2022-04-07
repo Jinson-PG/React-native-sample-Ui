@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import SideBar from './src/Drawer/SideBar';
 
 
 import Register from './src/Register'
@@ -15,8 +17,28 @@ import Settings from './src/Settings'
 import Chapter from './src/Chapter';
 
 
+const Drawer = createDrawerNavigator()
+
+
 const Stack = createStackNavigator();
 
+function MyDrawer(){
+  return(
+    <Drawer.Navigator
+      drawerContent= {(props)=> <SideBar {...props}
+       /> }>
+      <Drawer.Screen
+         name='Home'
+         component={Home}
+         options={{ headerShown: false }}
+      />
+   <Drawer.Screen
+         name='SideBar'
+         component={SideBar}
+        />
+    </Drawer.Navigator>
+  )
+}
 
 function MyStack() {
   return (
@@ -45,8 +67,8 @@ function MyStack() {
         component={AppTour}
         options={{ headerShown: false }} />
       <Stack.Screen
-        name='Home'
-        component={Home}
+        name='Drawer'
+        component={MyDrawer}
         options={{ headerShown: false }} />
       <Stack.Screen
         name='Course'
@@ -64,6 +86,7 @@ function MyStack() {
         name='Chapter'
         component={Chapter}
         options={{ headerShown: false }} />
+        
 
 
     </Stack.Navigator>
